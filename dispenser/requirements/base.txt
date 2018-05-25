@@ -1,0 +1,6 @@
+httpie==1.0.2
+websocket-client==0.52.0
+mpfshell==0.9.2
+doit==0.33.1
+doit-api==0.8.0
+doit-api==0.8.0

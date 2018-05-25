@@ -1,0 +1,560 @@
+maho@dlaptop:~/workspace/servo/servo_controller$ minicom -D /dev/ttyUSB0
+
+Witaj w minicomie 2.7
+
+OPCJE: I18n
+Skompilowany dnia Apr 22 2017, 09:14:19.
+Port /dev/ttyUSB0, 18:02:44
+
+Wciśnij CTRL-A Z po pomoc na temat specjalnych klawiszy
+
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+flash read err, 1000
+Falling back to built-in command interpreter.
+OK
+>ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0018,len:4
+load:0x3fff001c,len:4436
+load:0x40078000,len:0
+load:0x40078000,len:11816
+entry 0x4007a9fc
+I (362) cpu_start: Pro cpu up.
+I (362) cpu_start: Single core mode
+I (363) heap_init: Initializing. RAM available for dynamic allocation:
+I (366) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (372) heap_init: At 3FFC50C0 len 0001AF40 (107 KiB): DRAM
+I (378) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+I (385) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (391) heap_init: At 4008DE34 len 000121CC (72 KiB): IRAM
+I (397) cpu_start: Pro cpu start user code
+I (191) cpu_start: Starting scheduler on PRO CPU.
+I (742) modsocket: Initializing
+
+BrHed x
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0018,len:4
+load:0x3fff001c,len:4436
+load:0x40078000,len:0
+load:0x40078000,len:11816
+entry 0x4007a9fc
+I (362) cpu_start: Pro cpu up.
+I (362) cpu_start: Single core mode
+I (363) heap_init: Initializing. RAM available for dynamic allocation:
+I (366) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (372) heap_init: At 3FFC50C0 len 0001AF40 (107 KiB): DRAM
+I (378) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+I (384) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (391) heap_init: At 4008DE34 len 000121CC (72 KiB): IRAM
+I (397) cpu_start: Pro cpu start user code
+I (191) cpu_start: Starting scheduler on PRO CPU.
+I (742) modsocket: Initializing
+
+B򊋫Meditation ح[%͍
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0018,len:4
+load:0x3fff001c,len:4436
+load:0x40078000,len:0
+load:0x40078000,len:11816
+entry 0x4007a9fc
+I (362) cpu_start: Pro cpu up.
+I (362) cpu_start: Single core mode
+I (363) heap_init: Initializing. RAM available for dynamic allocation:
+I (366) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (372) heap_init: At 3FFC50C0 len 0001AF40 (107 KiB): DRAM
+I (378) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+I (384) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (391) heap_init: At 4008DE34 len 000121CC (72 KiB): IRAM
+I (397) cpu_start: Pro cpu start user code
+I (191) cpu_start: Starting scheduler on PRO CPU.
+I (742) modsocket: Initializing
+
+Brɽ C[65;11Hɺunhandled.
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0018,len:4
+load:0x3fff001c,len:4436
+load:0x40078000,len:0
+load:0x40078000,len:11816
+entry 0x4007a9fc
+I (362) cpu_start: Pro cpu up.
+I (362) cpu_start: Single core mode
+I (363) heap_init: Initializing. RAM available for dynamic allocation:
+I (366) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (372) heap_init: At 3FFC50C0 len 0001AF40 (107 KiB): DRAM
+I (378) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+I (385) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (391) heap_init: At 4008DE34 len 000121CC (72 KiB): IRAM
+I (397) cpu_start: Pro cpu start user code
+I (191) cpu_start: Starting scheduler on PRO CPU.
+I (742) modsocket: Initializing
+
+B%͗CTMeditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0018,len:4
+load:0x3fff001c,len:4436
+load:0x40078000,len:0
+load:0x40078000,len:11816
+entry 0x4007a9fc
+I (362) cpu_start: Pro cpu up.
+I (362) cpu_start: Single core mode
+I (363) heap_init: Initializing. RAM available for dynamic allocation:
+I (366) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (372) heap_init: At 3FFC50C0 len 0001AF40 (107 KiB): DRAM
+I (378) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+I (384) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (391) heap_init: At 4008DE34 len 000121CC (72 KiB): IRAM
+I (397) cpu_start: Pro cpu start user code
+I (191) cpu_start: Starting scheduler on PRO CPU.
+I (742) modsocket: Initializing
+
+Bɕ򽕁 0હ
+GZ~[65;13H?˽ Core  0 panic'ed (IllegalInstruction)
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0018,len:4
+load:0x3fff001c,len:4436
+load:0x40078000,len:0
+load:0x40078000,len:11816
+entry 0x4007a9fc
+I (362) cpu_start: Pro cpu up.
+I (362) cpu_start: Single core mode
+I (363) heap_init: Initializing. RAM available for dynamic allocation:
+I (366) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (372) heap_init: At 3FFC50C0 len 0001AF40 (107 KiB): DRAM
+I (378) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+I (384) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (391) heap_init: At 4008DE34 len 000121CC (72 KiB): IRAM
+I (397) cpu_start: Pro cpu start user code
+I (191) cpu_start: Starting scheduler on PRO CPU.
+I (742) modsocket: Initializing
+
+Br: Core`Ɂunhandled.
+ǰ~݋[65;13H Core  0 panic'ed (IllegalInstruction)
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0018,len:4
+load:0x3fff001c,len:4436
+load:0x40078000,len:0
+load:0x40078000,len:11816
+entry 0x4007a9fc
+I (362) cpu_start: Pro cpu up.
+I (362) cpu_start: Single core mode
+I (363) heap_init: Initializing. RAM available for dynamic allocation:
+I (366) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (372) heap_init: At 3FFC50C0 len 0001AF40 (107 KiB): DRAM
+I (378) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+I (384) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (391) heap_init: At 4008DE34 len 000121CC (72 KiB): IRAM
+I (397) cpu_start: Pro cpu start user code
+I (191) cpu_start: Starting scheduler on PRO CPU.
+I (742) modsocket: Initializing
+
+B 0          * Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction)
+. Exception was unhandled.
+
+. Exception was unhandled.ic'ed (IllegalInstruction) VT102 | Offline | ttyUSB0
+(micro)
+maho@dlaptop:~/workspace/servo/servo_controller$
