@@ -16,3 +16,4 @@ logs
 /button/localstubs/logging.py
 /button/localstubs/unittest.py
 /button/localstubs/urequests.py
+/video/
