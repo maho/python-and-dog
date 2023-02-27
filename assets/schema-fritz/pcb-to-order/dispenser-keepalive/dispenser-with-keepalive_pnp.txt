@@ -1,0 +1,42 @@
+*Pick And Place List
+*Company=
+*Author=
+*eMail=
+*
+*Project=dispenser-with-keepalive
+*Date=20:16:35
+*CreatedBy=Fritzing 0.9.10b.2022-07-01.CD-2134-0-40d23c29
+*
+*
+*Coordinates in mm, always center of component
+*Origin 0/0=Lower left corner of PCB
+*Rotation in degree (0-360, math. pos.)
+*
+*No;Value;Package;X;Y;Rotation;Side;Name
+1;0.030;3 mm [THT];45.5885;-41.3959;90;Bottom;LED2
+2;;TO92 [THT];32.3261;-18.7262;-90;Bottom;Q3
+3;0.030;3 mm [THT];45.5885;-21.0759;90;Bottom;LED3
+4;22k;THT;22.0772;-7.10573;-90;Bottom;R20
+5;;;14.3532;-23.2152;0;Bottom;ESP32-30pin1
+6;;;39.4892;-1.59703;-90;Bottom;J1
+7;;;51.2344;-25.9673;0;Bottom;Via1
+8;;;40.0338;-25.8621;0;Bottom;Via2
+9;;2x5-ra;55.5007;-38.7754;0;Bottom;USB-ESP
+10;47;THT;43.6672;-10.9157;180;Bottom;R18
+11;;dil-08;10.6481;-29.9892;180;Bottom;U3
+12;100;THT;38.5872;-41.3957;180;Bottom;R15
+13;220k;THT;23.2024;-14.3238;-90;Bottom;R22
+14;;cap-pth-small-kit;8.23423;-18.5357;180;Bottom;C9
+15;47;THT;43.6672;-31.2357;180;Bottom;R13
+16;;cap-pth-small-kit;8.23423;-41.3957;180;Bottom;C6
+17;5100;THT;18.2672;-21.0757;180;Bottom;R21
+18;20µF;100 mil [THT, tantalum];46.2072;-15.9957;0;Bottom;C7
+19;;2x5-ra;56.2241;-12.7324;0;Bottom;USB-S
+20;100;THT;38.5872;-21.0757;180;Bottom;R19
+21;22k;THT;22.0772;-27.4257;-90;Bottom;R16
+22;;dil-08;10.6472;-7.10573;180;Bottom;U7
+23;;TO92 [THT];32.3261;-39.0462;-90;Bottom;Q2
+24;;;-2.93457;-56.0237;-90;Bottom;Ruler1
+25;20µF;100 mil [THT, tantalum];46.2072;-36.3157;0;Bottom;C4
+26;5100;THT;18.2672;-41.3957;180;Bottom;R14
+27;220k;THT;22.0772;-35.0457;-90;Bottom;R17
