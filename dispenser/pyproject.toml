@@ -1,0 +1,23 @@
+[project]
+name = "dispenser"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "doit-api==0.8.0",
+    "doit==0.33.1",
+    "httpie==3.1.0",
+    "mpfshell==0.9.2",
+    "websocket-client==0.52.0",
+]
+
+[dependency-groups]
+test = [
+    "tox==3.23.1",
+]
+dev = [
+    "adafruit-ampy==1.0.7",
+    "esptool==3.0",
+    "pdbpp==0.10.2",
+]
