@@ -10,10 +10,19 @@ python = "^3.10"
 doit = "^0.36.0"
 doit-api = "^0.8.0"
 tomli = "^2.2.1"
+mpfshell = "^0.9.3"
+pipkin = "^2.1b1"
 
 
 [tool.poetry.group.dev.dependencies]
 esptool = "^4.8.1"
+black = "^24.10.0"
+pdbpp = "^0.10.3"
+
+
+[tool.poetry.group.candidates-dev.dependencies]
+rshell = "^0.0.36"
+shell49 = "^0.1.10"
 
 [build-system]
 requires = ["poetry-core"]
