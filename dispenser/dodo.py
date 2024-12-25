@@ -8,11 +8,11 @@ from typing import Set
 import doit.globals
 from doit import get_var
 from doit.action import CmdAction
-from doit.tools import Interactive, run_once, timeout
+from doit.tools import Interactive, run_once, timeout, result_dep
 from doit_api import task, pytask, cmdtask
 
 
-DOIT_CONFIG = {"default_tasks": ["send_pyfiles", "pips"], "verbosity": 2}
+DOIT_CONFIG = {"default_tasks": ["install"], "verbosity": 2}
 
 WEBREPL_ADDR = get_var("WEBREPL_ADDR", "192.168.1.38")
 WEBREPL_PASSWORD = get_var("WEBREPL_PASSWORD", "foobar")
@@ -106,17 +106,34 @@ def task_pips():
     for pkg in UPIPS:
         yield {
             "name": f"pip_{pkg}",
-            # "basename": f"pip_{pkg}",
-            # "actions": [(invoke_upip, [pkg])],
+            "basename": f"pip_{pkg}",
             "actions": [
                 CmdAction(
-                    f"{MPFSHELL} -c 'exec import mip;exec mip.install(\"{pkg}\");' | tee /tmp/pip_{pkg}.log "
-                    f"&& ! grep -q 'Error:' /tmp/pip_{pkg}.log",
+                    # && date is because result_dep checks output of the command if is
+                    # different than before
+                    f"pipkin -d lib install {pkg} && date",
                     shell=True,
                 )
             ],
-            # "uptodate": [run_once],
+            "uptodate": [timeout(timedelta(days=1))],
         }
+
+    # use mpfshell mput to send all files from lib to remote
+    yield {
+        "name": "copy lib to upy",
+        "actions": [CmdAction(f"{MPFSHELL} -c 'mput lib/*'")],
+        "uptodate": (
+            [timeout(timedelta(days=1))] + [result_dep(f"pip_{pkg}") for pkg in UPIPS]
+        ),
+    }
+
+
+def task_install():
+    """grouping task for running dependencies: pips and copy files"""
+    return {
+        "actions": [],
+        "task_dep": ["pips", "send_pyfiles"],
+    }
 
 
 def task_reset():
