@@ -1,15 +1,16 @@
+import glob
 import os
 import signal
 import subprocess
 import time
+from dataclasses import dataclass
 from datetime import timedelta
-from typing import Set
+from typing import List
 
-import doit.globals
 from doit import get_var
 from doit.action import CmdAction
-from doit.tools import Interactive, run_once, timeout, result_dep
-from doit_api import task, pytask, cmdtask
+from doit.tools import Interactive, timeout, result_dep
+from doit_api import cmdtask
 
 
 DOIT_CONFIG = {"default_tasks": ["install"], "verbosity": 2}
@@ -30,7 +31,6 @@ SRCS = [
     "conn.py",
     "template.py",
     "webrepl_cfg.py",
-    "lib/microdot.py",
 ]
 UPIPS = ["micropython-logging"]
 UPIPS_TESTS = []
@@ -40,33 +40,45 @@ MICROPYTHON_LIB_REPO = get_var(
 )
 
 
+@dataclass
+class MPFTransaction:
+    """transaction to be executed on mpfshell"""
+
+    actions: List[str]
+
+    def commit_to_mpfshell(self):
+        """send all commands to mpfshell in one script, then remove appropriate
+        .dirty files, then clean actions
+        """
+
+        input_ = b"\n".join([action.encode() for action in self.actions])
+
+        print(b"SCRIPT:\n" + input_)
+
+        ret = subprocess.run(
+            f"{MPFSHELLi} -s /dev/stdin",
+            input=input_,
+            shell=True,
+            check=True,
+            capture_output=True,
+        )
+
+        print(f"STDOUT: {ret.stdout}")
+        print(f"STDERR: {ret.stderr}")
+
+        # empty actions
+        self.actions = []
+
+        # remove all .*.dirty files/markers
+        for dirty in glob.glob(".[a-z]*.dirty"):
+            os.remove(dirty)
+
+
+transaction = MPFTransaction([])
+
+
 def show_cmd(task):
     return f"executing... {task.actions}"
-
-
-class actions_to_send:
-    before: Set[str] = set()
-    middle: Set[str] = set()
-    after: Set[str] = set()
-    task_names: Set[str] = set()
-
-    @classmethod
-    def add_file(cls, f):
-        dirname = os.path.dirname(f)
-        if dirname and dirname != "lib":
-            cls.before.add(f"md {dirname}")
-        cls.middle.add(f"put {f} {f}")
-        cls.task_names.add(f"send_{f}")
-
-    @classmethod
-    def upip(cls, pkgs):
-        cls.before.add("exec import upip")
-        cls.middle.add(f"exec upip.install({pkgs!r})")
-        cls.task_names.add("pips")
-
-    @classmethod
-    def actions(cls):
-        return list(cls.before) + list(cls.middle) + list(cls.after)
 
 
 def local_micropython(cmd):
@@ -87,16 +99,32 @@ def checkout_microdot():
 def task_send_pyfiles():
     """send files to ESP"""
 
-    def send_file(src):
-        subprocess.run(f"{MPFSHELL} -c 'put {src} {src}'", shell=True, check=True)
+    def send_file(src, task_name):
+        send_command_to_mpfshell(f"put {src} {src}", task_name)
 
     for src in SRCS:
+        task_name = f"send_{src}"
         yield {
-            "name": f"send_{src}",
+            "name": task_name,
             # "basename": f"send_{src}",
-            "actions": [(send_file, [src])],
+            "actions": [(send_file, [src, task_name])],
+            "task_dep": ["mkdir_lib"],
             "file_dep": [src],
+            "uptodate": [uptodate_task_not_dirty(task_name)],
         }
+
+
+def send_command_to_mpfshell(command, task_name):
+    transaction.actions.append(command)
+    # create file `.send_{src}.dirty` to mark that file has to be sent
+    # and if something fails with commiting the transaction - that this action needs
+    # to be repeated
+    open(f".{task_name}.dirty", "w").close()
+
+
+def uptodate_task_not_dirty(task_name):
+    """check if file is dirty and if yes - then return that it's not uptodate"""
+    return not os.path.exists(f".{task_name}.dirty")
 
 
 def task_pips():
@@ -121,10 +149,28 @@ def task_pips():
     # use mpfshell mput to send all files from lib to remote
     yield {
         "name": "copy lib to upy",
-        "actions": [CmdAction(f"{MPFSHELL} -c 'mput lib/*'")],
+        "actions": [
+            (
+                send_command_to_mpfshell,
+                ("lcd lib\ncd lib\nmput .*\\.py", "copy_lib_to_upy"),
+            )
+        ],
+        "task_dep": ["checkout_microdot"],
         "uptodate": (
-            [timeout(timedelta(days=1))] + [result_dep(f"pip_{pkg}") for pkg in UPIPS]
+            [
+                timeout(timedelta(days=1)),
+                uptodate_task_not_dirty("copy_lib_to_upy"),
+            ]
+            + [result_dep(f"pip_{pkg}") for pkg in UPIPS]
         ),
+    }
+
+
+def task_commit():
+    """commit MPF shell commands"""
+    return {
+        "actions": [transaction.commit_to_mpfshell],
+        "task_dep": ["pips", "send_pyfiles"],
     }
 
 
@@ -132,7 +178,7 @@ def task_install():
     """grouping task for running dependencies: pips and copy files"""
     return {
         "actions": [],
-        "task_dep": ["pips", "send_pyfiles"],
+        "task_dep": ["commit"],
     }
 
 
@@ -182,12 +228,24 @@ def task_local_microdot():
     }
 
 
+def task_mkdir_lib():
+    """create lib directory on remote esp"""
+    return {
+        "actions": [
+            (send_command_to_mpfshell, ("md lib", "mkdir_lib")),
+        ],
+        "uptodate": [uptodate_task_not_dirty("mkdir_lib")],
+    }
+
+
 def task_local_upip():
     """install via upip required packages"""
     upips = " ".join(UPIPS)
     return {
         "actions": [local_micropython(f"-m mip install {upips}")],
-        "task_dep": ["local_microdot"],
+        "task_dep": [
+            "local_microdot",
+        ],
         "uptodate": [timeout(timedelta(days=1))],
     }
 
@@ -206,7 +264,8 @@ def task_local_upylib_links():
     """make links between .micropython-lib and upy-local-lib"""
     return {
         "actions": [
-            "ln -sf ../.micropython-lib/python-stdlib/unittest/unittest.py upy-local-lib/unittest.py"
+            "ln -sf ../.micropython-lib/python-stdlib/unittest/unittest.py "
+            "upy-local-lib/unittest.py"
         ],
         "targets": ["upy-local-lib/unittest.py"],
         "task_dep": ["checkout_micropythonlib"],
@@ -244,7 +303,3 @@ def task_tests():
         "task_dep": ["local_upip", "local_upylib_links", "local_stubs:*"],
         "uptodate": [False],
     }
-
-
-def run_shell_cmd(cmd):
-    """run shell cmd, log runned command and return it's output. Simply wrapper around subprocess.run"""

@@ -6,5 +6,5 @@ install:
 	doit install
 
 reinstall:
-	doit forget
+	doit forget --all
 	doit install
